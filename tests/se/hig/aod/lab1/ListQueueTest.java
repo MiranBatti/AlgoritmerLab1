@@ -25,6 +25,59 @@ public class ListQueueTest {
 	{
 		assertEquals(true, testQueue.isEmpty());
 	}
+	
+	@Test
+	public void testQueueWithItemNotEmpty ()
+	{
+		testQueue.enqueue('a');
+		assertFalse ("Containing an item but empty!", testQueue.isEmpty ());
+	}
+	
+	@Test
+	public void testEnqueueOnEmptyQueue ()
+	{
+		try
+		{
+			testQueue.dequeue();
+			fail ("Expected: QueueEmptyException!");
+		} catch (QueueEmptyException e)
+		{
+			assertNotNull ("Expected: QueueEmptyException!", e);
+		}
+	}
+	
+	@Test
+	public void testQueueIsEmptyAfterDequeue ()
+	{
+		testQueue.enqueue('a');
+		testQueue.dequeue();
+		assertEquals(true, testQueue.isEmpty());
+	}
+	
+	@Test
+	public void testQueueOrder ()
+	{
+		testQueue.enqueue('a');
+		testQueue.enqueue('b');
+		char a = testQueue.dequeue();
+		assertEquals('a', a);
+	}
+	
+	@Test
+	public void testClearEmptyQueue ()
+	{
+		testQueue.clear();
+		assertEquals(true, testQueue.isEmpty());
+	}
+	
+	@Test
+	public void testClearPopulatedStack ()
+	{
+		testQueue.enqueue('a');
+		testQueue.enqueue('b');
+		testQueue.clear();
+		assertEquals(true, testQueue.isEmpty());
+	}
 
 
 }
