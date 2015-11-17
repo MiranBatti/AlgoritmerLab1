@@ -21,7 +21,16 @@ public class CheckBalance
 		while(balanserad && !uttryck.isEmpty()) {
 			char symbol = uttryck.charAt(i);
 			i++;
-			
+			if(symbol == '(')
+				charStack.push(symbol);
+			else if(symbol == ')') 
+				if(!charStack.isEmpty())
+					charStack.pop();
+				else
+					balanserad = false;
+			if(balanserad == true && !charStack.isEmpty())
+				balanserad = false;
+			charStack.clear();
 		}
 
 		return balanserad;
