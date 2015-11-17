@@ -15,8 +15,13 @@ public class CheckBalance
 		Stack<Character> charStack = new ListStack<Character> (); // Skapa en ny
 																	// stack
 		boolean balanserad = true;
+		int i = 0;
 
 		// Kod enligt algoritmen-beskrivning på s. 4
+		while(balanserad && !uttryck.isEmpty()) {
+			char symbol = uttryck.charAt(i);
+			i++;
+		}
 
 		return balanserad;
 	}
