@@ -26,13 +26,14 @@ public class ListStackTest
 	@Test
 	public void testNewStackIsEmpty ()
 	{
-		assertEquals(true, testStack.isEmpty());
+		boolean isEmpty = true;
+		assertEquals(isEmpty, testStack.isEmpty());
 	}
 
 	@Test
 	public void testStackWithItemNotEmpty ()
 	{
-		testStack.push ('a');
+		testStack.push (fixture[0]);
 		assertFalse ("Containing an item but empty!", testStack.isEmpty ());
 	}
 
@@ -52,7 +53,7 @@ public class ListStackTest
 	@Test
 	public void testStackIsEmptyAfterPop ()
 	{
-		testStack.push('a');
+		testStack.push(fixture[0]);
 		testStack.pop();
 		assertEquals(true, testStack.isEmpty());
 	}
@@ -60,10 +61,11 @@ public class ListStackTest
 	@Test
 	public void testPopOrder ()
 	{
-		testStack.push('a');
-		testStack.push('b');
-		char b = testStack.pop();
-		assertEquals('b', b);
+		for (int i = 0; i < fixture.length; i++) {
+			testStack.push(fixture[i]);
+		}
+		char d = testStack.pop();
+		assertEquals('d', d);
 	}
 
 	@Test
@@ -76,8 +78,9 @@ public class ListStackTest
 	@Test
 	public void testClearPopulatedStack ()
 	{
-		testStack.push('a');
-		testStack.push('b');
+		for (int i = 0; i < fixture.length; i++) {
+			testStack.push(fixture[i]);
+		}
 		testStack.clear();
 		assertEquals(true, testStack.isEmpty());
 	}

@@ -23,7 +23,7 @@ public class CheckBalance
 			char symbol = sb.charAt(0);
 			sb.deleteCharAt(0);
 			if(symbol == '(')
-				charStack.push(new Character(symbol));
+				charStack.push((symbol));
 			else if(symbol == ')') 
 				if(!charStack.isEmpty())
 					charStack.pop();

@@ -29,7 +29,7 @@ public class ListQueueTest {
 	@Test
 	public void testQueueWithItemNotEmpty ()
 	{
-		testQueue.enqueue('a');
+		testQueue.enqueue(fixture[0]);
 		assertFalse ("Containing an item but empty!", testQueue.isEmpty ());
 	}
 	
@@ -49,7 +49,7 @@ public class ListQueueTest {
 	@Test
 	public void testQueueIsEmptyAfterDequeue ()
 	{
-		testQueue.enqueue('a');
+		testQueue.enqueue(fixture[0]);
 		testQueue.dequeue();
 		assertEquals(true, testQueue.isEmpty());
 	}
@@ -57,8 +57,9 @@ public class ListQueueTest {
 	@Test
 	public void testQueueOrder ()
 	{
-		testQueue.enqueue('a');
-		testQueue.enqueue('b');
+		for (int i = 0; i < fixture.length; i++) {
+			testQueue.enqueue(fixture[i]);
+		}
 		char a = testQueue.dequeue();
 		assertEquals('a', a);
 	}
@@ -73,8 +74,9 @@ public class ListQueueTest {
 	@Test
 	public void testClearPopulatedStack ()
 	{
-		testQueue.enqueue('a');
-		testQueue.enqueue('b');
+		for (int i = 0; i < fixture.length; i++) {
+			testQueue.enqueue(fixture[i]);
+		}
 		testQueue.clear();
 		assertEquals(true, testQueue.isEmpty());
 	}
