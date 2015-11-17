@@ -21,6 +21,7 @@ public class CheckBalance
 		while(balanserad && !uttryck.isEmpty()) {
 			char symbol = uttryck.charAt(i);
 			i++;
+			
 		}
 
 		return balanserad;
