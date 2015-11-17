@@ -1,6 +1,7 @@
 package se.hig.aod.lab1;
 
 //Fredrik is in da house
+//mera
 
 import static org.junit.Assert.*;
 
