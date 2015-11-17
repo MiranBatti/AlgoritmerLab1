@@ -34,15 +34,15 @@ public class ListQueueTest {
 	}
 	
 	@Test
-	public void testEnqueueOnEmptyQueue ()
+	public void testDequeueOnEmptyQueue ()
 	{
 		try
 		{
 			testQueue.dequeue();
-			fail ("Expected: QueueEmptyException!");
+			fail("Expected: QueueEmptyException!");
 		} catch (QueueEmptyException e)
 		{
-			assertNotNull ("Expected: QueueEmptyException!", e);
+			assertNotNull("Expected: QueueEmptyException!", e);
 		}
 	}
 	
