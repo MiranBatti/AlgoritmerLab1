@@ -15,24 +15,24 @@ public class CheckBalance
 		Stack<Character> charStack = new ListStack<Character> (); // Skapa en ny
 																	// stack
 		boolean balanserad = true;
-		int i = 0;
+		StringBuilder sb = new StringBuilder();
+		sb.append(uttryck);
 
 		// Kod enligt algoritmen-beskrivning på s. 4
-		while(balanserad && !uttryck.isEmpty()) {
-			char symbol = uttryck.charAt(i);
-			i++;
+		while(balanserad && sb.length() != 0) {
+			char symbol = sb.charAt(0);
+			sb.deleteCharAt(0);
 			if(symbol == '(')
-				charStack.push(symbol);
+				charStack.push(new Character(symbol));
 			else if(symbol == ')') 
 				if(!charStack.isEmpty())
 					charStack.pop();
 				else
 					balanserad = false;
-			if(balanserad == true && !charStack.isEmpty())
-				balanserad = false;
-			charStack.clear();
 		}
-
+		if(balanserad == true && !charStack.isEmpty())
+			balanserad = false;
+		charStack.clear();		
 		return balanserad;
 	}
 
