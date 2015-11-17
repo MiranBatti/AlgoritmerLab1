@@ -1,5 +1,7 @@
 package se.hig.aod.lab1;
 
+//Fredrik is in da house
+
 import static org.junit.Assert.*;
 
 import org.junit.After;
