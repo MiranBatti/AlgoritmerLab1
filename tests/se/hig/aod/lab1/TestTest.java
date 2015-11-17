@@ -7,9 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TestTest {
+	String balanseratUttryck, obalanseratUttryck;
 
 	@Before
 	public void setUp() throws Exception {
+		 balanseratUttryck = "()";
+		 obalanseratUttryck = ")(";
 	}
 
 	@After
@@ -17,8 +20,15 @@ public class TestTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testIfBalancedTrue() {
+		boolean check = CheckBalance.isBalanced(balanseratUttryck);
+		assertEquals(true, check);
+	}
+	
+	@Test
+	public void testIfBalancedFalse() {
+		boolean check = CheckBalance.isBalanced(obalanseratUttryck);
+		assertFalse(check);
 	}
 
 }
