@@ -5,7 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ * 
+ * @author Miran Batti, Fredrik Linddorf
+ * @version 2015-11-18
+ *
+ */
 public class TestTest {
 	String balanseratUttryck, obalanseratUttryck;
 
@@ -19,12 +24,18 @@ public class TestTest {
 	public void tearDown() throws Exception {
 	}
 
+	/*
+	 * Testa att ett balanserat uttryck blir sant.
+	 */
 	@Test
 	public void testIfBalancedTrue() {
 		boolean check = CheckBalance.isBalanced(balanseratUttryck);
-		assertEquals(true, check);
+		assertTrue(check);
 	}
 	
+	/*
+	 * Testa ett obalanserat uttryck blir falskt.
+	 */
 	@Test
 	public void testIfBalancedFalse() {
 		boolean check = CheckBalance.isBalanced(obalanseratUttryck);

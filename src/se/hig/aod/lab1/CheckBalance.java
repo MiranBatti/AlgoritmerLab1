@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * En klass som använder sig av en stack för att kontrollera parentesuttryck.
  * 
- * @author Magnus Blom, Peter Jenke
+ * @author Magnus Blom, Peter Jenke, Miran Batti, Fredrik Lindorf
  * @version 2014-01-16
  */
 public class CheckBalance
@@ -14,7 +14,7 @@ public class CheckBalance
 	{
 		Stack<Character> charStack = new ListStack<Character> (); // Skapa en ny
 																	// stack
-		boolean balanserad = true;
+		boolean balanserad = true; // anta att uttrycket är balanserat
 		StringBuilder sb = new StringBuilder();
 		sb.append(uttryck);
 

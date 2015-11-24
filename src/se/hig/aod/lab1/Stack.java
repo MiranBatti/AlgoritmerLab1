@@ -11,7 +11,6 @@ package se.hig.aod.lab1;
  * @author Peter Jenke
  * @version 2014-01-16
  */
-
 public interface Stack <V>
 {
     /** 

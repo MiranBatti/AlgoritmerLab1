@@ -6,6 +6,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * 
+ * @author Miran Batti, Fredrik Linddorf
+ * @version 2015-11-18
+ *
+ */
 public class ListStackTest
 {
 	ListStack<Character> testStack;
@@ -22,7 +28,10 @@ public class ListStackTest
 	{
 		testStack = null;
 	}
-
+	
+	/**
+	 * Testa om stack är tom när den skapas
+	 */
 	@Test
 	public void testNewStackIsEmpty ()
 	{
@@ -30,13 +39,19 @@ public class ListStackTest
 		assertEquals(isEmpty, testStack.isEmpty());
 	}
 
+	/**
+	 * Testa om stack inte är tom efter någonting lagras i stacken
+	 */
 	@Test
 	public void testStackWithItemNotEmpty ()
 	{
 		testStack.push (fixture[0]);
-		assertFalse ("Containing an item but empty!", testStack.isEmpty ());
+		assertFalse("Containing an item but empty!", testStack.isEmpty ());
 	}
 
+	/**
+	 * Testa ta bort från en tom stack.
+	 */
 	@Test
 	public void testPopOnEmptyStack ()
 	{
@@ -50,6 +65,9 @@ public class ListStackTest
 		}
 	}
 
+	/**
+	 * Testa om stack är tom efter någonting lagras och sedan tas bort.
+	 */
 	@Test
 	public void testStackIsEmptyAfterPop ()
 	{
@@ -58,6 +76,9 @@ public class ListStackTest
 		assertEquals(true, testStack.isEmpty());
 	}
 
+	/**
+	 * Testa ordningen. Det första elementet i stacken ska ut först.
+	 */
 	@Test
 	public void testPopOrder ()
 	{
@@ -68,6 +89,9 @@ public class ListStackTest
 		assertEquals('d', d);
 	}
 
+	/**
+	 * Testa tömma en tom stack.
+	 */
 	@Test
 	public void testClearEmptyStack ()
 	{
@@ -75,6 +99,9 @@ public class ListStackTest
 		assertEquals(true, testStack.isEmpty());
 	}
 
+	/**
+	 * Testa tömma en stack som innehåller flera objekt.
+	 */
 	@Test
 	public void testClearPopulatedStack ()
 	{
