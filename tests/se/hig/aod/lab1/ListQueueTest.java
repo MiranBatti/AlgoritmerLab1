@@ -8,7 +8,8 @@ import org.junit.Test;
 
 /**
  * 
- * @author Miran Batti, Fredrik Linddorf
+ * @author Miran Batti
+ * @author Fredrik Lindorf
  * @version 2015-11-18
  *
  */

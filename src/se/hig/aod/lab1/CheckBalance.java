@@ -5,7 +5,10 @@ import java.util.Scanner;
 /**
  * En klass som använder sig av en stack för att kontrollera parentesuttryck.
  * 
- * @author Magnus Blom, Peter Jenke, Miran Batti, Fredrik Lindorf
+ * @author Magnus Blom
+ * @author Peter Jenke
+ * @author Miran Batti
+ * @author Fredrik Lindorf
  * @version 2014-01-16
  */
 public class CheckBalance

@@ -8,7 +8,8 @@ import org.junit.Test;
 
 /**
  * 
- * @author Miran Batti, Fredrik Linddorf
+ * @author Miran Batti
+ * @author Fredrik Lindorf
  * @version 2015-11-18
  *
  */
@@ -77,7 +78,7 @@ public class ListStackTest
 	}
 
 	/**
-	 * Testa ordningen. Det första elementet i stacken ska ut först.
+	 * Testa ordningen. Sista elementet i stacken ska ut först.
 	 */
 	@Test
 	public void testPopOrder ()
